@@ -1,0 +1,17 @@
+﻿<Window x:Class="Жбанк_app.Popolnenie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Жбанк_app"
+        mc:Ignorable="d"
+        Title="Popolnenie" Height="600" Width="400">
+    <Grid>
+        <TextBox x:Name="sumBox" HorizontalAlignment="Left" MaxLength="7" Height="30" Margin="98,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" PreviewTextInput="sumBox_PreviewTextInput"/>
+        <Label Content="Введите сумму" HorizontalAlignment="Left" Height="30" Margin="98,263,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button x:Name="PopolnenieBtn" Content="Пополнить" HorizontalAlignment="Center" Height="33" Margin="0,395,0,0" VerticalAlignment="Top" Width="200" Click="PopolnenieBtn_Click"/>
+        <Button x:Name="Balance" Content="Нажмите чтобы узнать баланс" HorizontalAlignment="Left" Height="33" Margin="100,77,0,0" VerticalAlignment="Top" Width="200" Click="Balance_Click"/>
+        <Button x:Name="Back" Content="Назад" HorizontalAlignment="Left" Height="34" Margin="338,10,0,0" VerticalAlignment="Top" Width="52" Click="Back_Click"/>
+
+    </Grid>
+</Window>

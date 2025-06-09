@@ -1,0 +1,17 @@
+﻿<Window x:Class="Жбанк_app.ViborOperacii"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Жбанк_app"
+        mc:Ignorable="d"
+        Title="ViborOperacii" Height="600" Width="400">
+    <Grid>
+        <Label Content="Выберите тип операции" HorizontalAlignment="Center" Height="40" Margin="0,143,0,0" VerticalAlignment="Top" Width="160"/>
+        <Button x:Name="SniatBtn" Content="Снятие" HorizontalAlignment="Left" Height="48" Margin="80,335,0,0" VerticalAlignment="Top" Width="80" Click="SniatBtn_Click"/>
+        <Button x:Name="PopolBtn" Content="Пополнение" HorizontalAlignment="Left" Height="48" Margin="240,335,0,0" VerticalAlignment="Top" Width="80" Click="PopolBtn_Click"/>
+        <Button x:Name="Back" Content="Назад" HorizontalAlignment="Left" Height="31" Margin="327,10,0,0" VerticalAlignment="Top" Width="63" Click="Back_Click"/>
+        <Button x:Name="Balance" Content="Нажмите чтобы узнать баланс" HorizontalAlignment="Center" Height="42" Margin="0,76,0,0" VerticalAlignment="Top" Width="182" Click="Balance_Click"/>
+
+    </Grid>
+</Window>
