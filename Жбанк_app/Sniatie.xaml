@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Sniatie" Height="600" Width="400">
     <Grid>
-        <TextBox x:Name="sumBox" HorizontalAlignment="Center" Height="30" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" PreviewTextInput="sumBox_PreviewTextInput"/>
+        <TextBox x:Name="sumBox" HorizontalAlignment="Center" MaxLength="7" Height="30" TextWrapping="Wrap" VerticalAlignment="Center" Width="200" PreviewTextInput="sumBox_PreviewTextInput"/>
         <Label Content="Введите сумму снятия кратную 100" HorizontalAlignment="Center" Height="30" Margin="0,247,0,0" VerticalAlignment="Top" Width="230"/>
         <Button x:Name="SniatieBtn" Content="Снять" HorizontalAlignment="Center" Height="54" Margin="0,388,0,0" VerticalAlignment="Top" Width="196" Click="SniatieBtn_Click"/>
         <Button x:Name="Balance" Content="Нажмите чтобы узнать баланс" HorizontalAlignment="Center" Height="54" Margin="0,99,0,0" VerticalAlignment="Top" Width="196" AutomationProperties.IsColumnHeader="True" Click="Balance_Click"/>

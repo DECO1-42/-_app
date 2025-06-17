@@ -28,7 +28,7 @@ namespace Жбанк_app
 
         private void SniatieBtn_Click(object sender, RoutedEventArgs e)
         {
-            try
+            try //Блок try-catch для обработки возможных ошибок при работе программы
             {
                 int sum = Convert.ToInt32(sumBox.Text);
                 int user_id;
@@ -68,31 +68,39 @@ namespace Жбанк_app
                     command.Parameters.AddWithValue("@user_id", user_id);
                     ballance = (decimal)command.ExecuteScalar();
                 }
-                if (ballance - sum < 0)
+                if (ballance - sum < 0) //Проверка на наличие достаточной суммы на балансе
                 {
-                    sum = 0;
+                    sum = 0; //Сумма операции приравнивается к нулю для избежания ошибочных транзакций
                     MessageBox.Show("На вашем счёте недостаточно средств");
-                    MainWindow MaW = new MainWindow();
-                    MaW.Show();
+                    Sniatie Sn = new Sniatie();
+                    Sn.Show();
                     this.Close();
                 }
-                else if (ostatok_v_bankomate - sum < 0)
+                else if (ostatok_v_bankomate - sum < 0) //Проверка на наличие достаточного количества средчтв в банкомате
                 {
-                    sum = 0;
+                    sum = 0; //Сумма операции приравнивается к нулю для избежания ошибочных транзакций
                     MessageBox.Show("Извините в банкомате недостаточно средств");
-                    MainWindow MaW = new MainWindow();
-                    MaW.Show();
+                    Sniatie Sn = new Sniatie();
+                    Sn.Show();
                     this.Close();
                 }
-                else if (sum % 100 != 0)
+                else if (sum % 100 != 0) //Проверка на корректность введённой суммы для получения
                 {
-                    sum = 0;
+                    sum = 0; //Сумма операции приравнивается к нулю для избежания ошибочных транзакций
                     MessageBox.Show("Пожалуйста введите сумму кратную 100");
                     Sniatie Sn = new Sniatie();
                     Sn.Show();
                     this.Close();
                 }
-                else
+                else if (sum == 0) //Проверка на корректность введённой суммы для получения
+                {
+                    sum = 0; //Сумма операции приравнивается к нулю для избежания ошибочных транзакций
+                    MessageBox.Show("Пожалуйста введите сумму кратную 100");
+                    Sniatie Sn = new Sniatie();
+                    Sn.Show();
+                    this.Close();
+                }    
+                else //Событие при корректно введённых данны
                 {
                     ballance -= sum;
                     ostatok_v_bankomate -= sum;
@@ -123,23 +131,23 @@ namespace Жбанк_app
                     this.Close();
                 }
             }
-            catch (NpgsqlException ex)
+            catch (NpgsqlException ex) //Блок обработки ошибок при работе програмы
             {
                 MessageBox.Show($"Ошибка базы данных: {ex.Message}");
                 sumBox.Clear();
             }
-            catch (Exception ex)
+            catch (Exception ex) //Блок обработки ошибок при работе програмы
             {
                 MessageBox.Show($"Неожиданная ошибка: {ex.Message}");
                 sumBox.Clear();
             }
-            finally
+            finally //Событие выполняемое независимо от того сработала программа корректно или нет
             {
               sumBox.Clear();
             }
         }
 
-        private void Balance_Click(object sender, RoutedEventArgs e)
+        private void Balance_Click(object sender, RoutedEventArgs e) //Кнопка для отображения баланса
         {
             int user_id;
             decimal ballance;
@@ -165,7 +173,7 @@ namespace Жбанк_app
             Balance.Content = ballance;
         }
 
-        private void sumBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        private void sumBox_PreviewTextInput(object sender, TextCompositionEventArgs e) //Обработчик события запрещающий вводить символы кроме цифр
         {
             if (!Char.IsDigit(e.Text, 0))
             {
@@ -173,7 +181,7 @@ namespace Жбанк_app
             }
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e) //Кнопка для перехода к форме выбора операции
         {
             ViborOperacii VO = new ViborOperacii();
             VO.Show();

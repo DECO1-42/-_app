@@ -12,6 +12,7 @@
         <Button x:Name="PopolBtn" Content="Пополнение" HorizontalAlignment="Left" Height="48" Margin="240,335,0,0" VerticalAlignment="Top" Width="80" Click="PopolBtn_Click"/>
         <Button x:Name="Back" Content="Назад" HorizontalAlignment="Left" Height="31" Margin="327,10,0,0" VerticalAlignment="Top" Width="63" Click="Back_Click"/>
         <Button x:Name="Balance" Content="Нажмите чтобы узнать баланс" HorizontalAlignment="Center" Height="42" Margin="0,76,0,0" VerticalAlignment="Top" Width="182" Click="Balance_Click"/>
+        <Button x:Name="PhonePopolBtn" Content="Пополнение телефона" HorizontalAlignment="Center" Height="48" Margin="0,407,0,0" VerticalAlignment="Top" Width="138" Click="PhonePopolBtn_Click"/>
 
     </Grid>
 </Window>

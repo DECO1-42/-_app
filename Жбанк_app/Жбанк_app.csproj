@@ -83,6 +83,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JbankAppDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="PhonePopolnenie.xaml.cs">
+      <DependentUpon>PhonePopolnenie.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Popolnenie.xaml.cs">
       <DependentUpon>Popolnenie.xaml</DependentUpon>
     </Compile>
@@ -104,6 +107,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PhonePopolnenie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Popolnenie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

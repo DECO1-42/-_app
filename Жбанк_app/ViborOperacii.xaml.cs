@@ -26,33 +26,28 @@ namespace Жбанк_app
             InitializeComponent();
         }
 
-        private void SniatBtn_Click(object sender, RoutedEventArgs e)
+        private void SniatBtn_Click(object sender, RoutedEventArgs e) //Обработчик события для перехода на форму снятия
         {
             Sniatie sn = new Sniatie();
             sn.Show();
             this.Close();
         }
 
-        private void PopolBtn_Click(object sender, RoutedEventArgs e)
+        private void PopolBtn_Click(object sender, RoutedEventArgs e) //Обработчик события для перехода на форму пополнения
         {
             Popolnenie pop = new Popolnenie();
             pop.Show();
             this.Close();
         }
 
-        private void Close_Click(object sender, RoutedEventArgs e)
-        {
-  
-        }
-
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e) //Обработчик события для перехода на форму авторизации
         {
             MainWindow MW = new MainWindow();
             MW.Show();
             this.Close();
         }
 
-        private void Balance_Click(object sender, RoutedEventArgs e)
+        private void Balance_Click(object sender, RoutedEventArgs e) //Кнопка для отображения баланса
         {
             int user_id;
             decimal ballance;
@@ -76,6 +71,13 @@ namespace Жбанк_app
                 ballance = (decimal)command.ExecuteScalar();
             }
             Balance.Content = ballance;
+        }
+
+        private void PhonePopolBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PhonePopolnenie PP = new PhonePopolnenie();
+            PP.Show();
+            this.Close();
         }
     }
 }

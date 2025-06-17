@@ -1,0 +1,19 @@
+﻿<Window x:Class="Жбанк_app.PhonePopolnenie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Жбанк_app"
+        mc:Ignorable="d"
+        Title="PhonePopolnenie" Height="600" Width="400">
+    <Grid>
+        <Label Content="Введите номер телефона без кода страны" HorizontalAlignment="Center" Height="40" Margin="0,143,0,0" VerticalAlignment="Top" Width="244"/>
+        <Button x:Name="Back" Content="Назад" HorizontalAlignment="Left" Height="31" Margin="327,10,0,0" VerticalAlignment="Top" Width="63" Click="Back_Click"/>
+        <TextBox x:Name="PhoneNum" HorizontalAlignment="Center" MinLines="10" MaxLength="10" Height="35" Margin="0,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" PreviewTextInput="PhoneNum_PreviewTextInput"/>
+        <Label Content="Введите сумму кратную 100" HorizontalAlignment="Center" Height="40" Margin="0,279,0,0" VerticalAlignment="Top" Width="182"/>
+        <TextBox x:Name="sumBox" HorizontalAlignment="Center"  MaxLength="7" Height="35" Margin="0,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+        <Button x:Name="PopolBtn" Content="Пополнить" HorizontalAlignment="Center" Height="42" Margin="0,398,0,0" VerticalAlignment="Top" Width="182" Click="PopolBtn_Click"/>
+        <Label Content="+7" HorizontalAlignment="Left" Height="35" Margin="86,195,0,0" VerticalAlignment="Top" Width="34"/>
+
+    </Grid>
+</Window>
