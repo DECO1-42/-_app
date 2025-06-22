@@ -79,5 +79,12 @@ namespace Жбанк_app
             PP.Show();
             this.Close();
         }
+
+        private void JkhBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Oplata_jkh OJ = new Oplata_jkh();
+            OJ.Show();
+            this.Close();
+        }
     }
 }
