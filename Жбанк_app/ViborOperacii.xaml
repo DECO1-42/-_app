@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Жбанк_app"
         mc:Ignorable="d"
-        Title="ViborOperacii" Height="600" Width="400">
+        Title="ViborOperacii" Height="600" Width="400" ResizeMode="NoResize">
     <Grid>
         <Label Content="Выберите тип операции" HorizontalAlignment="Center" Height="40" Margin="0,143,0,0" VerticalAlignment="Top" Width="160"/>
         <Button x:Name="SniatBtn" Content="Снятие" HorizontalAlignment="Left" Height="48" Margin="80,335,0,0" VerticalAlignment="Top" Width="80" Click="SniatBtn_Click"/>

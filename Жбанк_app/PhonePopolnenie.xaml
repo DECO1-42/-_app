@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Жбанк_app"
         mc:Ignorable="d"
-        Title="PhonePopolnenie" Height="600" Width="400">
+        Title="PhonePopolnenie" Height="600" Width="400" ResizeMode="NoResize">
     <Grid>
         <Label Content="Введите номер телефона без кода страны" HorizontalAlignment="Center" Height="40" Margin="0,143,0,0" VerticalAlignment="Top" Width="244"/>
         <Button x:Name="Back" Content="Назад" HorizontalAlignment="Left" Height="31" Margin="327,10,0,0" VerticalAlignment="Top" Width="63" Click="Back_Click"/>

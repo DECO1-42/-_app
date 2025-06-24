@@ -1,0 +1,29 @@
+﻿<Window x:Class="Жбанк_app.admin_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Жбанк_app"
+        mc:Ignorable="d"
+        Title="admin_window" Height="800" Width="600" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="UsersTable" AutoGenerateColumns="True" HorizontalAlignment="Center" Height="180" VerticalAlignment="Top" Width="544" Margin="0,66,0,0" />
+        <Button x:Name="Back" Content="Назад" HorizontalAlignment="Left" Height="31" Margin="527,10,0,0" VerticalAlignment="Top" Width="63" Click="Back_Click"/>
+        <Button x:Name="RefreshUsers" Content="Обновить таблицу" HorizontalAlignment="Left" Height="25" Margin="471,281,0,0" VerticalAlignment="Top" Width="108" Click="Button_Click"/>
+        <Button x:Name="AddUsers" Content="Добавить запись" HorizontalAlignment="Left" Height="25" Margin="361,281,0,0" VerticalAlignment="Top" Width="105" Click="AddUsers_Click"/>
+        <TextBox x:Name="NumCardBox" HorizontalAlignment="Left" MaxLength="16" Height="25" Margin="9,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" PreviewTextInput="NumCardBox_PreviewTextInput"/>
+        <TextBox x:Name="RoleIdBox" HorizontalAlignment="Left" MaxLength="1" Height="25" Margin="264,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" PreviewTextInput="RoleIdBox_PreviewTextInput"/>
+        <TextBox x:Name="PinBox" HorizontalAlignment="Left" MaxLength="4" Height="25" Margin="145,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" PreviewTextInput="PinBox_PreviewTextInput"/>
+        <Label Content="Номер карты" HorizontalAlignment="Left" Height="25" Margin="28,251,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label Content="ID роли" HorizontalAlignment="Left" Height="25" Margin="264,254,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label Content="Пин-код" HorizontalAlignment="Left" Height="25" Margin="145,256,0,0" VerticalAlignment="Top" Width="92"/>
+        <DataGrid x:Name="JKHTable" AutoGenerateColumns="True" HorizontalAlignment="Center" Height="192" VerticalAlignment="Top" Width="544" Margin="0,324,0,0" />
+        <Button x:Name="RefreshJKH" Content="Обновить таблицу" HorizontalAlignment="Left" Height="26" Margin="471,546,0,0" VerticalAlignment="Top" Width="108" Click="RefreshJKH_Click" />
+        <Button x:Name="AddJKH" Content="Добавить запись" HorizontalAlignment="Left" Height="26" Margin="345,546,0,0" VerticalAlignment="Top" Width="105" Click="AddJKH_Click" />
+        <TextBox x:Name="NumSchetaBox" HorizontalAlignment="Left" MaxLength="8" Height="25" Margin="10,546,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" PreviewTextInput="NumSchetaBox_PreviewTextInput"/>
+        <TextBox x:Name="sumKoplateBox" HorizontalAlignment="Left" MaxLength="7" Height="25" Margin="191,546,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" PreviewTextInput="sumKoplateBox_PreviewTextInput_1"  />
+        <Label Content="Номер счёта" HorizontalAlignment="Left" Height="25" Margin="28,516,0,0" VerticalAlignment="Top" Width="92"/>
+        <Label Content="К оплате" HorizontalAlignment="Left" Height="25" Margin="191,516,0,0" VerticalAlignment="Top" Width="92"/>
+
+    </Grid>
+</Window>

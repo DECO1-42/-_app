@@ -42,17 +42,25 @@ namespace Жбанк_app
                 using (NpgsqlConnection sqlcon = new NpgsqlConnection(Properties.Settings.Default.JbankAppConnectionString)) //Строка подключения к БД
                 {
                     sqlcon.Open();
-
-                    NpgsqlCommand command = new NpgsqlCommand("SELECT * FROM users WHERE card_num = @login and pin = @Pin", sqlcon); //Запрос авторизации
+                    string role;
+                    NpgsqlCommand command = new NpgsqlCommand("SELECT role FROM users WHERE card_num = @login and pin = @Pin", sqlcon); //Запрос авторизации
                     command.Parameters.AddWithValue("@login", logtxt);//Строка для защиты от sql инъекции
                     command.Parameters.AddWithValue("@Pin", Pintxt);//Строка для защиты от sql инъекции
-                    NpgsqlDataReader reader = command.ExecuteReader();
-                    if (reader.Read())//Проверка, возвращаются ли данные по запросу 
+                    role = (string)command.ExecuteScalar();
+                    if (role == "user") 
                     {
                         DataContainer.logtxt = logtxt;//Дата контейнер передающий логин в другие формы
                         DataContainer.pintxt = Pintxt;//Дата контейнер передающий пин-код в другие формы
                         ViborOperacii VibOp = new ViborOperacii();//Объявление нового экземпляра формы выбор операции
                         VibOp.Show();
+                        this.Close();
+                    }
+                    else if (role == "admin") 
+                    {
+                        DataContainer.logtxt = logtxt;//Дата контейнер передающий логин в другие формы
+                        DataContainer.pintxt = Pintxt;//Дата контейнер передающий пин-код в другие формы
+                        admin_window aw = new admin_window();
+                        aw.Show();
                         this.Close();
                     }
                     else //Событие в случае введения неверного пароля или логина

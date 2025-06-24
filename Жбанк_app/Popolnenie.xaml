@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Жбанк_app"
         mc:Ignorable="d"
-        Title="Popolnenie" Height="600" Width="400">
+        Title="Popolnenie" Height="600" Width="400" ResizeMode="NoResize">
     <Grid>
         <TextBox x:Name="sumBox" HorizontalAlignment="Left" MaxLength="7" Height="30" Margin="98,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" PreviewTextInput="sumBox_PreviewTextInput"/>
         <Label Content="Введите сумму кратную 100" HorizontalAlignment="Left" Height="30" Margin="98,263,0,0" VerticalAlignment="Top" Width="200"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Жбанк_app"
         mc:Ignorable="d"
-        Title="Oplata_jkh" Height="600" Width="400">
+        Title="Oplata_jkh" Height="600" Width="400" ResizeMode="NoResize">
     <Grid>
         <Button x:Name="Balance" Content="Нажмите чтобы узнать баланс" HorizontalAlignment="Center" Height="33" Margin="0,75,0,0" VerticalAlignment="Top" Width="200" Click="Balance_Click"/>
         <Button x:Name="Back" Content="Назад" HorizontalAlignment="Left" Height="34" Margin="338,10,0,0" VerticalAlignment="Top" Width="52" Click="Back_Click" />
@@ -19,7 +19,7 @@
         <TextBox x:Name="ElNightBox" HorizontalAlignment="Left" MaxLength="7" Height="28" Margin="236,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.503,0.403" PreviewTextInput="ElNightBox_PreviewTextInput"/>
         <Label x:Name="KOplate" Content="К оплате:" HorizontalAlignment="Left" Height="29" Margin="125,385,0,0" VerticalAlignment="Top" Width="175"/>
         <Button x:Name="OplatitBtn" Content="Оплатить" HorizontalAlignment="Center" Height="47" Margin="0,454,0,0" VerticalAlignment="Top" Width="200" Click="OplatitBtn_Click"/>
-        <TextBox x:Name="SchetChekBox" HorizontalAlignment="Center" MaxLength="7" Height="28" Margin="0,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.503,0.403" PreviewTextInput="SchetChekBox_PreviewTextInput"/>
+        <TextBox x:Name="SchetChekBox" HorizontalAlignment="Center" MaxLength="8" Height="28" Margin="0,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.503,0.403" PreviewTextInput="SchetChekBox_PreviewTextInput"/>
         <Button x:Name="SchetChek" Content="Проверить корректность ввода номера счёта" HorizontalAlignment="Center" Height="31" Margin="0,167,0,0" VerticalAlignment="Top" Width="275" Click="SchetChek_Click"/>
         <Label Content="Введите номер счёта:" HorizontalAlignment="Left" Height="29" Margin="100,113,0,0" VerticalAlignment="Top" Width="150"/>
 
