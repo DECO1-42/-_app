@@ -19,7 +19,7 @@
         <TextBox x:Name="ElNightBox" HorizontalAlignment="Left" MaxLength="7" Height="28" Margin="236,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128" RenderTransformOrigin="0.503,0.403" PreviewTextInput="ElNightBox_PreviewTextInput"/>
         <Label x:Name="KOplate" Content="К оплате:" HorizontalAlignment="Left" Height="29" Margin="125,385,0,0" VerticalAlignment="Top" Width="175"/>
         <Button x:Name="OplatitBtn" Content="Оплатить" HorizontalAlignment="Center" Height="47" Margin="0,454,0,0" VerticalAlignment="Top" Width="200" Click="OplatitBtn_Click"/>
-        <TextBox x:Name="SchetChekBox" HorizontalAlignment="Center" MaxLength="15" Height="28" Margin="0,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.503,0.403" PreviewTextInput="SchetChekBox_PreviewTextInput"/>
+        <TextBox x:Name="SchetChekBox" HorizontalAlignment="Center" MaxLength="7" Height="28" Margin="0,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.503,0.403" PreviewTextInput="SchetChekBox_PreviewTextInput"/>
         <Button x:Name="SchetChek" Content="Проверить корректность ввода номера счёта" HorizontalAlignment="Center" Height="31" Margin="0,167,0,0" VerticalAlignment="Top" Width="275" Click="SchetChek_Click"/>
 
     </Grid>
